@@ -299,3 +299,39 @@ body {
   text-decoration: none;
   font-weight: 500;
 }
+
+.about-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about-photo {
+  flex: 0 0 240px;
+  max-width: 240px;
+  text-align: center;
+}
+
+.about-photo img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.about-copy {
+  flex: 1 1 260px;
+  min-width: 260px;
+}
+
+/* Force side-by-side on desktop, allow vertical stack on smaller screens */
+@media (min-width: 800px) {
+  .about-row {
+    flex-wrap: nowrap;
+  }
+}
+
