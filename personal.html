@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Projects | Romir Vyas</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <div class="nav-left">
+      <a class="brand" href="index.html">Romir Vyas</a>
+      <div class="sub">Senior Mechanical Engineer · Electromechanical Systems</div>
+    </div>
+    <div class="nav-right">
+      <a href="project-vecna.html">Vecna</a>
+      <a href="project-gpr.html">GPR</a>
+      <a href="personal.html">Personal</a>
+      <a href="viewer.html">Interactive CAD</a>
+      <a href="about.html">About</a>
+      <a href="RomirVyas_Resume.pdf" target="_blank">Resume</a>
+    </div>
+  </nav>
+</header>
+
+<main class="wrapper">
+
+  <section class="section-head" data-reveal>
+    <div class="section-eyebrow">Personal / Independent Work</div>
+    <h1 class="section-title">Hands-On Mechanical Design</h1>
+    <p class="section-desc">
+      A sample of parts and assemblies I can show publicly. These emphasize CAD modeling,
+      tolerance control, manufacturability, and iterative prototyping. Some of these will
+      also appear in interactive 3D on the <a href="viewer.html" style="color:var(--accent);text-decoration:none;font-weight:500;">Interactive CAD</a> page.
+    </p>
+  </section>
+
+  <section data-reveal style="margin-bottom:3rem;">
+    <div class="section-eyebrow">Bike Hardware / Seatpost</div>
+    <div class="thumb"
+      style="background-image:url('images/bike_hero.jpg'); margin-top:1rem;">
+    </div>
+    <p class="section-desc" style="margin-top:1rem;">
+      • Custom bike seatpost / clamp hardware and brackets  
+      • Modeled for printability / machinability depending on revision  
+      • Focus on strength, weight, ease of install  
+      • Generated drawings and GD&T for key interfaces  
+    </p>
+  </section>
+
+  <section data-reveal style="margin-bottom:3rem;">
+    <div class="section-eyebrow">Espresso Machine Mod / Component Work</div>
+    <div class="thumb"
+      style="background-image:url('images/espresso_hero.jpg'); margin-top:1rem;">
+    </div>
+    <p class="section-desc" style="margin-top:1rem;">
+      • Custom part(s) for espresso machine upgrade / repair  
+      • Reverse-engineered mating geometry and sealing surfaces  
+      • Modeled replacement components and iterated on fit/finish  
+      • Built for real daily-use environment (thermal, pressure, cleanup)  
+    </p>
+  </section>
+
+  <section data-reveal style="margin-bottom:3rem;">
+    <div class="section-eyebrow">Fixtures / Assembly Aids (Personal)</div>
+    <div class="thumb"
+      style="background-image:url('images/fixture_hero.jpg'); margin-top:1rem;">
+    </div>
+    <p class="section-desc" style="margin-top:1rem;">
+      • Simple fixtures / jigs created to hold parts in repeatable orientations  
+      • Emphasis on controlling alignment and freeing up hands during assembly  
+      • These are the types of low-cost tools I like to build to stabilize processes early
+    </p>
+  </section>
+
+  <section data-reveal style="margin-bottom:2rem;">
+    <a class="btn btn-accent" href="viewer.html">See Interactive CAD →</a>
+    <a class="btn" href="index.html">← Back to Home</a>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div>© <span id="year"></span> Romir Vyas · Framingham, MA</div>
+  <div>Contact: <a href="mailto:romir.vyas@gmail.com">romir.vyas@gmail.com</a></div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
