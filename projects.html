@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Romir Vyas</title>
+  <title>Vecna Robotics AMR Integration | Romir Vyas</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
@@ -16,7 +16,10 @@
       <div class="sub">Senior Mechanical Engineer · Electromechanical Systems</div>
     </div>
     <div class="nav-right">
-      <a href="projects.html">Projects</a>
+      <a href="project-vecna.html">Vecna</a>
+      <a href="project-gpr.html">GPR</a>
+      <a href="personal.html">Personal</a>
+      <a href="viewer.html">Interactive CAD</a>
       <a href="about.html">About</a>
       <a href="RomirVyas_Resume.pdf" target="_blank">Resume</a>
     </div>
@@ -26,92 +29,61 @@
 <main class="wrapper">
 
   <section class="section-head" data-reveal>
-    <div class="section-eyebrow">Detailed Work</div>
-    <h1 class="section-title">Projects & Contributions</h1>
-    <p class="section-desc">
-      Below are representative examples of my design work in robotics, radar sensing,
-      sealing, thermal management, and manufacturability.
-      (Some CAD is simplified or redacted for confidentiality.)
-    </p>
-  </section>
-
-  <section id="robot-mount" style="margin-bottom:3rem;" data-reveal>
-    <div class="section-eyebrow">Autonomous Mobile Robot</div>
-    <h2 class="section-title">Sensor & LiDAR Mount Architecture</h2>
+    <div class="section-eyebrow">Vecna Robotics</div>
+    <h1 class="section-title">Perception Stack & Sensor Mounting for Autonomous Mobile Robot</h1>
     <p class="section-desc">
       Designed and released precision mounting hardware for LiDAR and camera perception
-      stacks on an AMR platform. Goals: vibration stability, maintain alignment,
-      allow field service, and stay manufacturable.
-    </p>
-
-    <div class="thumb"
-      style="background-image:url('images/robot_mount_full.jpg'); margin-top:1.5rem;">
-    </div>
-
-    <p class="section-desc" style="margin-top:1rem;">
-      Highlights:
-      <br>• Integrated multi-sensor stack with defined datums and tolerance control  
-      <br>• Defined key torque values for fasteners using engineering references.   
-      <br>• Balanced stiffness vs. weight vs. machinability  
+      stacks on an autonomous mobile robot (AMR), with a focus on vibration stability,
+      serviceability, manufacturability, and cable management.
     </p>
   </section>
 
-  <section id="radar-enclosure" style="margin-bottom:3rem;" data-reveal>
-    <div class="section-eyebrow">Ruggedized Radar</div>
-    <h2 class="section-title">Novel Ground-Positioning Radar Design</h2>
+  <div class="thumb"
+    style="background-image:url('images/vecna_hero.jpg'); margin-bottom:2rem;">
+  </div>
+
+  <section data-reveal style="margin-bottom:2rem;">
+    <div class="section-eyebrow">Objective</div>
     <p class="section-desc">
-      Led the mechanical design for an environmental housing protecting RF hardware
-      mounted underneath autonomous vehicles for localization. Managed sealing strategy,
-      connector strain relief, environmental loads (shock, vibration, thermal, corrosion), and manufacturability through vendors.
-    </p>
-
-    <div class="thumb"
-      style="background-image:url('images/radar_enclosure_full.jpg'); margin-top:1.5rem;">
-    </div>
-
-    <p class="section-desc" style="margin-top:1rem;">
-      Highlights:
-      <br>• IP-style sealing approach for road salt, debris, splash  
-      <br>• Thermal conduction path from high-power electronics to exterior surfaces  
-      <br>• DFMA: minimized fastener count and simplified assembly order  
+      Integrate multiple sensing modalities (LiDAR, cameras, other perception hardware)
+      into a constrained robot envelope while maintaining alignment under vibration and
+      allowing field replacement without full tear-down or re-shim.
     </p>
   </section>
 
-  <section id="fixture" style="margin-bottom:3rem;" data-reveal>
-    <div class="section-eyebrow">Manufacturing Tooling</div>
-    <h2 class="section-title">Assembly / Test Fixtures</h2>
+  <section data-reveal style="margin-bottom:2rem;">
+    <div class="section-eyebrow">Constraints & Environment</div>
     <p class="section-desc">
-      Built fixtures and corresponding work instructions to ensure repeatable assembly,
-      reduce handling damage, and lock in QC checkpoints. Captured assembly
-      know-how into a documented, controlled process.
+      • High vibration and shock from warehouse operation and impacts  
+      • Tight mechanical envelope around other robot subsystems  
+      • Required lines-of-sight for sensors and safety coverage  
+      • Harness routing and strain relief for sensor wiring  
+      • Need for tool access in the field, not just at the bench  
     </p>
+  </section>
 
-    <div class="thumb"
-      style="background-image:url('images/fixture_full.jpg'); margin-top:1.5rem;">
-    </div>
+  <section data-reveal style="margin-bottom:2rem;">
+    <div class="section-eyebrow">My Role</div>
+    <p class="section-desc">
+      • Designed rigid, datum-controlled mounting hardware to keep perception stack aligned  
+      • Tuned local geometry and ribbing for stiffness without mass bloat  
+      • Drove serviceability: fastener access, repeatable repositioning, minimal re-calibration  
+      • Released production-ready drawings to vendors, working within PLM for traceability  
+    </p>
+  </section>
 
-    <p class="section-desc" style="margin-top:1rem;">
-      Highlights:
-      <br>• Reduced alignment variability across operators  
-      <br>• Supported traceability and PLM-controlled revision of process docs  
-      <br>• Helped scale from prototype bench builds to an assembly line environment  
+  <section data-reveal style="margin-bottom:2rem;">
+    <div class="section-eyebrow">Manufacturing / Release</div>
+    <p class="section-desc">
+      • Balanced machined features vs. sheet/formed components for speed and cost  
+      • Reduced unique hardware types to simplify assembly and spares  
+      • Captured design intent and change control through formal release process  
     </p>
   </section>
 
   <section data-reveal>
-    <div class="section-eyebrow">Coming Soon</div>
-    <h2 class="section-title">Interactive CAD Viewer</h2>
-    <p class="section-desc">
-      This section will include an embeddable 3D model you can spin in-browser.
-      Only non-confidential / personally owned designs will be shared here.
-    </p>
-
-    <!-- placeholder for later <model-viewer> embed -->
-    <div class="thumb"
-      style="display:flex;align-items:center;justify-content:center;
-             color:var(--text-secondary);font-size:0.8rem;">
-      3D model viewer placeholder
-    </div>
+    <a class="btn" href="index.html">← Back to Home</a>
+    <a class="btn" href="project-gpr.html">Next: GPR Radar →</a>
   </section>
 
 </main>
