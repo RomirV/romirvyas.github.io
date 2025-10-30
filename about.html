@@ -1,67 +1,39 @@
+<section class="section-head" data-reveal>
+  <div class="section-eyebrow">About</div>
+  <h1 class="section-title">About Me</h1>
+  <!-- We’re not putting body text here because you want the portrait next to the text below -->
+</section>
+
 <section data-reveal>
+  <div class="about-row">
 
-  <!-- Outer card wrapper with same dark/glass style as the rest of the site -->
-  <div
-    style="
-      background: var(--bg-card);
-      border:1px solid var(--border-color);
-      border-radius: var(--radius-xl);
-      box-shadow:0 30px 80px rgba(0,0,0,0.8);
-      padding:2rem;
-    "
-  >
-
-    <!-- Section header (eyebrow + title) to match your global style -->
-    <div class="section-head" style="margin-bottom:1.5rem;">
-      <div class="section-eyebrow">About</div>
-      <h1 class="section-title" style="margin:0;">About Me</h1>
+    <!-- Portrait -->
+    <div class="about-photo">
+      <img src="images/romir_portrait.jpeg" alt="Romir Vyas" />
     </div>
 
-    <!-- Flex row: portrait + text -->
-    <div
-      style="
-        display:flex;
-        flex-wrap:wrap;
-        align-items:flex-start;
-        gap:2rem;
-      "
-    >
+    <!-- Text column -->
+    <div class="about-copy">
+      <p class="section-desc" style="margin-top:0;">
+        I’m a senior mechanical engineer focused on bringing electromechanical products from
+        early concept through production release. My experience spans precision sensor
+        integration, ruggedized enclosures, and design for manufacturability.
+      </p>
 
-      <!-- Portrait -->
-      <div style="flex:0 0 240px; max-width:240px; text-align:center;">
-        <img src="images/romir_portrait.jpeg"
-             alt="Romir Vyas"
-             style="
-               width:240px;
-               height:240px;
-               border-radius:50%;
-               object-fit:cover;
-               border:2px solid rgba(255,255,255,0.1);
-               box-shadow:0 10px 30px rgba(0,0,0,0.5);
-             " />
-      </div>
+      <p class="section-desc">
+        Outside of work, I’m an avid skier, cyclist, and musician — I enjoy projects that
+        combine creative and technical problem-solving. I’m always open to collaborations
+        where design and engineering intersect to make something real. 
+      </p>
 
-      <!-- Text -->
-      <div style="flex:1 1 260px; min-width:260px;">
-        <p class="section-desc" style="margin-top:0;">
-          I’m a senior mechanical engineer focused on bringing electromechanical products from
-          early concept through production release. My experience spans precision sensor
-          integration, ruggedized enclosures, and design for manufacturability.
-        </p>
-
-        <p class="section-desc">
-          Outside of work, I’m an avid skier, cyclist, and musician — I enjoy projects that
-          combine creative and technical problem-solving. I’m always open to collaborations
-          where design and engineering intersect to make something real. 
-        </p>
-
-        <p class="section-desc" style="margin-bottom:1.5rem;">
-          <strong>Contact:</strong> 
-          <a href="mailto:romir.vyas@gmail.com" 
-             style="color:var(--accent); text-decoration:none;">romir.vyas@gmail.com</a>
-        </p>
-      </div>
-
+      <p class="section-desc" style="margin-bottom:1.5rem;">
+        <strong>Contact:</strong>
+        <a href="mailto:romir.vyas@gmail.com"
+           style="color:var(--accent); text-decoration:none;">
+          romir.vyas@gmail.com
+        </a>
+      </p>
     </div>
+
   </div>
 </section>
