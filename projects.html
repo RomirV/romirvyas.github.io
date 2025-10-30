@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Romir Vyas</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <div class="nav-left">
+      <a class="brand" href="index.html">Romir Vyas</a>
+      <div class="sub">Mechanical Engineer · Electromechanical Systems</div>
+    </div>
+    <div class="nav-right">
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="RomirVyas_Resume.pdf" target="_blank">Resume</a>
+    </div>
+  </nav>
+</header>
+
+<main class="wrapper">
+
+  <section class="section-head" data-reveal>
+    <div class="section-eyebrow">Detailed Work</div>
+    <h1 class="section-title">Projects & Contributions</h1>
+    <p class="section-desc">
+      Below are representative examples of my design work in robotics, radar sensing,
+      production tooling, sealing, thermal management, and manufacturability.
+      (Some CAD is simplified or redacted for confidentiality.)
+    </p>
+  </section>
+
+  <section id="robot-mount" style="margin-bottom:3rem;" data-reveal>
+    <div class="section-eyebrow">Autonomous Mobile Robot</div>
+    <h2 class="section-title">Sensor & LiDAR Mount Architecture</h2>
+    <p class="section-desc">
+      Designed and released precision mounting hardware for LiDAR and camera perception
+      stacks on an AMR platform. Goals: vibration stability, maintain alignment,
+      allow field service, and stay manufacturable.
+    </p>
+
+    <div class="thumb"
+      style="background-image:url('images/robot_mount_full.jpg'); margin-top:1.5rem;">
+    </div>
+
+    <p class="section-desc" style="margin-top:1rem;">
+      Highlights:
+      <br>• Integrated multi-sensor stack with defined datums and tolerance control  
+      <br>• Reduced re-torque drift using locking features and rib geometry  
+      <br>• Balanced stiffness vs. weight vs. machinability  
+    </p>
+  </section>
+
+  <section id="radar-enclosure" style="margin-bottom:3rem;" data-reveal>
+    <div class="section-eyebrow">Ruggedized Radar</div>
+    <h2 class="section-title">Sealed Ground-Positioning Radar Enclosure</h2>
+    <p class="section-desc">
+      Led the mechanical design for an environmental housing protecting RF hardware
+      mounted underneath autonomous vehicles for localization. Managed sealing strategy,
+      connector strain relief, thermal path, and manufacturability through vendors.
+    </p>
+
+    <div class="thumb"
+      style="background-image:url('images/radar_enclosure_full.jpg'); margin-top:1.5rem;">
+    </div>
+
+    <p class="section-desc" style="margin-top:1rem;">
+      Highlights:
+      <br>• IP-style sealing approach for road salt, debris, splash  
+      <br>• Thermal conduction path from high-power electronics to exterior surfaces  
+      <br>• DFMA: minimized fastener count and simplified assembly order  
+    </p>
+  </section>
+
+  <section id="fixture" style="margin-bottom:3rem;" data-reveal>
+    <div class="section-eyebrow">Manufacturing Tooling</div>
+    <h2 class="section-title">Assembly / Test Fixtures</h2>
+    <p class="section-desc">
+      Built fixtures and corresponding work instructions to ensure repeatable assembly,
+      reduce handling damage, and lock in QC checkpoints. Captured tacit assembly
+      know-how into documented, controlled process.
+    </p>
+
+    <div class="thumb"
+      style="background-image:url('images/fixture_full.jpg'); margin-top:1.5rem;">
+    </div>
+
+    <p class="section-desc" style="margin-top:1rem;">
+      Highlights:
+      <br>• Reduced alignment variability across operators  
+      <br>• Supported traceability and PLM-controlled revision of process docs  
+      <br>• Helped scale from prototype bench builds toward manufacturable flow  
+    </p>
+  </section>
+
+  <section data-reveal>
+    <div class="section-eyebrow">Coming Soon</div>
+    <h2 class="section-title">Interactive CAD Viewer</h2>
+    <p class="section-desc">
+      This section will include an embeddable 3D model you can spin in-browser.
+      Only non-confidential / personally owned designs will be shared here.
+    </p>
+
+    <!-- placeholder for later <model-viewer> embed -->
+    <div class="thumb"
+      style="display:flex;align-items:center;justify-content:center;
+             color:var(--text-secondary);font-size:0.8rem;">
+      3D model viewer placeholder
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div>© <span id="year"></span> Romir Vyas · Framingham, MA</div>
+  <div>Contact: <a href="mailto:romir.vyas@gmail.com">romir.vyas@gmail.com</a></div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
