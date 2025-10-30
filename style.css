@@ -1,0 +1,301 @@
+/* ===========================
+ Global theme
+ =========================== */
+:root {
+  --bg-page: #0f172a;
+  --bg-card: rgba(15, 23, 42, 0.6);
+  --bg-card-solid: #1e2537;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent: #38bdf8;
+  --border-color: rgba(148, 163, 184, 0.2);
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --max-width: 1200px;
+  --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-stack);
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+/* ===========================
+  Layout helpers
+=========================== */
+.wrapper {
+  max-width: var(--max-width);
+  padding: 2rem 1.5rem 5rem;
+  margin: 0 auto;
+}
+
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0 0 2rem 0;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--accent);
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.5rem;
+  width: fit-content;
+}
+
+.section-title {
+  font-size: clamp(1.25rem, 1vw + 1rem, 1.5rem);
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.section-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  max-width: 42rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ===========================
+  Header / nav
+=========================== */
+.site-header {
+  border-bottom: 1px solid var(--border-color);
+  background: radial-gradient(circle at 20% 0%, rgba(56,189,248,0.08) 0%, rgba(15,23,42,0) 60%);
+  backdrop-filter: blur(6px);
+}
+
+.navbar {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-primary);
+}
+
+.nav-left .brand {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.nav-left .sub {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.nav-right a {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  transition: color 0.15s;
+}
+
+.nav-right a:hover {
+  color: var(--accent);
+}
+
+/* ===========================
+  Hero card
+=========================== */
+.hero-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media(min-width: 800px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.hero-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.8);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-chip {
+  font-size: 0.7rem;
+  color: var(--accent);
+  background: rgba(56,189,248,0.12);
+  border: 1px solid rgba(56,189,248,0.4);
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  width: fit-content;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.hero-title {
+  font-size: clamp(1.4rem, 1vw + 1rem, 1.8rem);
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.3;
+  margin: 0 0 1rem;
+}
+
+.hero-text {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin: 0 0 1.5rem;
+  max-width: 36rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  font-weight: 500;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--border-color);
+  background-color: rgba(30,41,59,0.4);
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.btn-accent {
+  background: radial-gradient(circle at 0% 0%, rgba(56,189,248,0.25) 0%, rgba(15,23,42,0) 60%), rgba(30,41,59,0.6);
+  border-color: rgba(56,189,248,0.5);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.btn:hover {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+  border-color: rgba(148,163,184,0.4);
+  transform: translateY(-1px);
+  color: #fff;
+}
+
+/* ===========================
+  Project cards
+=========================== */
+.project-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media(min-width: 650px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media(min-width: 1000px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1rem 1.25rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+  overflow: hidden;
+  transition: all 0.15s;
+}
+
+.project-card:hover {
+  transform: translateY(-2px) scale(1.01);
+  border-color: rgba(56,189,248,0.4);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.9), 0 0 30px rgba(56,189,248,0.25);
+}
+
+.thumb {
+  background-color: #1e2537;
+  border: 1px solid rgba(148,163,184,0.2);
+  border-radius: 0.7rem;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 1rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.project-name {
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  margin: 0 0 0.4rem;
+}
+
+.project-meta {
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.project-desc {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* ===========================
+  Footer
+=========================== */
+.site-footer {
+  margin-top: 4rem;
+  padding: 2rem 1.5rem 4rem;
+  background: radial-gradient(circle at 80% 0%, rgba(56,189,248,0.08) 0%, rgba(15,23,42,0) 60%);
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  text-align: center;
+  line-height: 1.4;
+}
+.site-footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
