@@ -299,8 +299,7 @@ body {
   text-decoration: none;
   font-weight: 500;
 }
-
-.about-row {
+.about-flex-row {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -308,15 +307,15 @@ body {
   margin-bottom: 2rem;
 }
 
-.about-photo {
-  flex: 0 0 240px;
-  max-width: 240px;
+.about-portrait {
+  flex: 0 0 220px;
+  max-width: 220px;
   text-align: center;
 }
 
-.about-photo img {
-  width: 240px;
-  height: 240px;
+.about-portrait img {
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(255,255,255,0.1);
@@ -328,10 +327,11 @@ body {
   min-width: 260px;
 }
 
-/* Force side-by-side on desktop, allow vertical stack on smaller screens */
+/* Don't wrap unless we're on a smaller screen */
 @media (min-width: 800px) {
-  .about-row {
+  .about-flex-row {
     flex-wrap: nowrap;
   }
 }
+
 
