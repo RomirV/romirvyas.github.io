@@ -16,59 +16,83 @@
       <div class="sub">Mechanical Engineer · Electromechanical Systems</div>
     </div>
     <div class="nav-right">
-      <a href="projects.html">Projects</a>
-      <a href="about.html">About</a>
-      <a href="RomirVyas_Resume.pdf" target="_blank">Resume</a>
+      <a href="project-vecna.html">Vecna</a> 
+      <a href="project-gpr.html">GPR</a> 
+      <a href="personal.html">Personal</a> 
+      <a href="viewer.html">Interactive CAD</a> 
+      <a href="about.html">About</a> 
+      <a href="RomirVyas_Resume.pdf" target="_blank">Resume</a> 
     </div>
   </nav>
 </header>
 
 <main class="wrapper">
 
- <section data-reveal>
+  <!-- Intro + portrait side by side -->
+  <section data-reveal>
+    <div class="about-flex-row" style="
+      display:flex;
+      flex-wrap:wrap;
+      align-items:flex-start;
+      gap:2rem;
+      margin-bottom:3rem;
+    ">
 
-    <!-- Text column -->
-    <div class="about-copy">
-      <div class="section-head">
-        <h1 class="section-title">A bit about me</h1>
-        <p class="section-desc">
+      <!-- Text column -->
+      <div class="about-copy" style="flex:1 1 260px; min-width:260px;">
+        <h1 class="section-title" style="margin:0 0 1rem 0;">A bit about me</h1>
+
+        <p class="section-desc" style="margin-top:0;">
           I’m a senior mechanical engineer focused on bringing electromechanical products from
           early concept through production release. My experience spans precision sensor
           integration, ruggedized enclosures, and design for manufacturability.
         </p>
       </div>
- <div class="about-flex-row">
 
-    <!-- Portrait column -->
-    <div class="about-portrait">
-      <img src="images/romir_portrait.jpeg" alt="Romir Vyas" />
-    </div>
-      <div class="hero-buttons" style="margin-bottom:3rem;">
-        <a class="btn btn-accent" href="RomirVyas_Resume.pdf" target="_blank">Download Resume (PDF)</a>
-        <a class="btn" href="mailto:romir.vyas@gmail.com">Email Me</a>
+      <!-- Portrait column -->
+      <div class="about-portrait" style="
+        flex:0 0 240px;
+        max-width:240px;
+        text-align:center;
+      ">
+        <img src="images/romir_portrait.jpeg"
+             alt="Romir Vyas"
+             style="
+               width:240px;
+               height:240px;
+               border-radius:50%;
+               object-fit:cover;
+               border:2px solid rgba(255,255,255,0.1);
+               box-shadow:0 10px 30px rgba(0,0,0,0.5);
+             " />
       </div>
+
     </div>
+  </section>
 
-  </div>
+  <!-- Contact / call to action -->
+  <section data-reveal style="margin-bottom:3rem;">
+    <h2 class="hero-title" style="margin-bottom:1rem;">Get in touch</h2>
 
-</section>
-
-
-  <section data-reveal>
-    <div class="hero-title" style="margin-bottom:0.5rem;">Get in touch</div>
     <p class="hero-text" style="margin:0 0 1rem;">
-        Outside of work, I’m an avid skier, cyclist, and musician — I enjoy projects that
-        combine creative and technical problem-solving. I’m always open to collaborations
-        where design and engineering intersect to make something real. 
+      Outside of work, I’m an avid skier, cyclist, and musician — I enjoy projects that
+      combine creative and technical problem-solving. I’m always open to collaborations
+      where design and engineering intersect to make something real.
     </p>
 
-    <p class="hero-text" style="margin:0;">
+    <p class="hero-text" style="margin:0 0 2rem;">
       Email: <a style="color:var(--accent);text-decoration:none;font-weight:500;"
         href="mailto:romir.vyas@gmail.com">romir.vyas@gmail.com</a>
     </p>
+
+    <div class="hero-buttons" style="margin-bottom:3rem;">
+      <a class="btn btn-accent" href="RomirVyas_Resume.pdf" target="_blank">Download Resume (PDF)</a>
+      <a class="btn" href="mailto:romir.vyas@gmail.com">Email Me</a>
+    </div>
   </section>
 
 </main>
+
 
 <footer class="site-footer">
   <div>© <span id="year"></span> Romir Vyas · Framingham, MA</div>
