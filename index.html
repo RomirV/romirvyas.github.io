@@ -1,67 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Romir Vyas | Senior Mechanical Engineer</title>
-    <style>
-      body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        background-color: #0f172a;
-        color: #f8fafc;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        margin: 0;
-        padding: 2rem;
-      }
-      .card {
-        max-width: 480px;
-        background: rgba(15, 23, 42, 0.6);
-        border: 1px solid rgba(148, 163, 184, 0.2);
-        border-radius: 1rem;
-        padding: 2rem;
-        box-shadow: 0 30px 80px rgba(0,0,0,0.8);
-      }
-      h1 {
-        font-size: 1.4rem;
-        line-height: 1.3;
-        margin: 0 0 0.5rem 0;
-        font-weight: 600;
-        color: #fff;
-      }
-      .sub {
-        font-size: 0.95rem;
-        color: #94a3b8;
-        line-height: 1.4;
-        margin-bottom: 1.5rem;
-      }
-      .coming {
-        font-size: 0.8rem;
-        font-weight: 500;
-        color: #38bdf8;
-        background: rgba(56, 189, 248, 0.12);
-        border: 1px solid rgba(56, 189, 248, 0.4);
-        padding: 0.4rem 0.6rem;
-        border-radius: 0.5rem;
-        display: inline-block;
-        margin-bottom: 1rem;
-      }
-    </style>
-  </head>
-  <body>
-    <main class="card">
-      <div class="coming">Portfolio site in progress</div>
-      <h1>Romir Vyas — Senior Mechanical Engineer</h1>
-      <div class="sub">
-        Designing and shipping complex electromechanical systems
-        (robotics, autonomy, manufacturing). This site will host selected
-        projects, CAD, test fixtures, and DFM work.
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Romir Vyas | Mechanical Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <div class="nav-left">
+      <a class="brand" href="index.html">
+        Romir Vyas
+      </a>
+      <div class="sub">Mechanical Engineer · Electromechanical Systems</div>
+    </div>
+    <div class="nav-right">
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="RomirVyas_Resume.pdf" target="_blank">Resume</a>
+    </div>
+  </nav>
+</header>
+
+<main class="wrapper">
+
+  <!-- HERO -->
+  <section class="hero-grid" data-reveal>
+    <div class="hero-card">
+      <div class="hero-chip">Ruggedized hardware · Robotics · DFM</div>
+      <h1 class="hero-title">I design, build, and release real-world hardware.</h1>
+      <p class="hero-text">
+        7+ years developing electromechanical systems across autonomous
+        mobile robots, ground-positioning radar, and production tooling.
+        I take designs from concept → test → manufacturing release.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn btn-accent" href="projects.html">View Projects →</a>
+        <a class="btn" href="RomirVyas_Resume.pdf" target="_blank">Open Resume (PDF)</a>
       </div>
-      <div class="sub">
-        Check back for interactive CAD models and project breakdowns.
+    </div>
+
+    <div class="hero-card" data-reveal style="min-height: 260px;">
+      <div class="hero-chip">Coming soon</div>
+      <div class="hero-title" style="margin-bottom:0.75rem;">
+        Interactive CAD viewer
       </div>
-    </main>
-  </body>
+      <p class="hero-text" style="margin-bottom:0;">
+        You'll be able to orbit and inspect select assemblies directly on this site
+        (non-confidential geometry only). This highlights design for manufacturability,
+        sealing, tolerance control, and packaging.
+      </p>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section style="margin-top:3rem;" data-reveal>
+    <div class="section-head">
+      <div class="section-eyebrow">Selected Work</div>
+      <h2 class="section-title">Recent Projects</h2>
+      <p class="section-desc">
+        A few representative examples. These include sensor integration on autonomous
+        robots, sealed radar enclosures for harsh environments, and manufacturing
+        tooling to control tolerance stack-up.
+      </p>
+    </div>
+
+    <div class="project-grid">
+
+      <!-- Project Card 1 -->
+      <a class="project-card" href="projects.html#robot-mount">
+        <div class="thumb"
+          style="background-image:url('images/robot_mount_thumb.jpg');">
+        </div>
+
+        <div class="project-meta">Sensor Integration · AMR</div>
+        <div class="project-name">Precision sensor & LiDAR mounting for autonomous mobile robot</div>
+        <p class="project-desc">
+          Designed adjustable, vibration-stable mounting for LiDAR/camera stack.
+          Balanced rigidity, serviceability, and manufacturability for production.
+        </p>
+      </a>
+
+      <!-- Project Card 2 -->
+      <a class="project-card" href="projects.html#radar-enclosure">
+        <div class="thumb"
+          style="background-image:url('images/radar_enclosure_thumb.jpg');">
+        </div>
+
+        <div class="project-meta">Sealing · Thermal · DFM</div>
+        <div class="project-name">Ruggedized ground-positioning radar enclosure</div>
+        <p class="project-desc">
+          Led full mechanical design for an IP-rated radar housing used on autonomous vehicles.
+          Managed sealing strategy, thermal path, and supplier readiness.
+        </p>
+      </a>
+
+      <!-- Project Card 3 -->
+      <a class="project-card" href="projects.html#fixture">
+        <div class="thumb"
+          style="background-image:url('images/fixture_thumb.jpg');">
+        </div>
+
+        <div class="project-meta">Tooling · Repeatability</div>
+        <div class="project-name">Assembly / test fixture development</div>
+        <p class="project-desc">
+          Built fixtures and process documentation to reduce assembly variation and lock in QC.
+          Transferred tribal knowledge into repeatable manufacturing steps.
+        </p>
+      </a>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div>© <span id="year"></span> Romir Vyas · Framingham, MA</div>
+  <div>Contact: <a href="mailto:romir.vyas@gmail.com">romir.vyas@gmail.com</a></div>
+</footer>
+
+<script>
+  // update footer year automatically
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
 </html>
