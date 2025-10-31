@@ -1,6 +1,13 @@
 /* ===========================
  Global theme
  =========================== */
+
+/* Font setup */
+:root {
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
 :root {
   --bg-page: #0f172a;
   --bg-card: rgba(15, 23, 42, 0.6);
@@ -24,12 +31,25 @@
 
 body {
   margin: 0;
-  font-family: var(--font-stack);
+  font-family: var(--font-body);
   background-color: var(--bg-page);
   color: var(--text-primary);
   line-height: 1.5;
 }
 
+/* ===========================
+  Typography - headings, nav, buttons
+=========================== */
+h1, h2, h3,
+.section-title,
+.hero-title,
+.section-eyebrow,
+.navbar a,
+.btn {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
 /* ===========================
   Layout helpers
 =========================== */
