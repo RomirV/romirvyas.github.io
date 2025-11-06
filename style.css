@@ -1,3 +1,45 @@
+/* Fade-in animation for sections/cards */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeInUp 0.8s cubic-bezier(.2,.8,.2,1) forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Microinteractions for buttons/cards */
+.btn {
+  transition: transform 140ms var(--ease, cubic-bezier(.2,.8,.2,1)), box-shadow 140ms var(--ease, cubic-bezier(.2,.8,.2,1)), background 0.18s;
+}
+.btn:hover, .btn:focus {
+  background: var(--accent-dark);
+  color: #fff;
+  box-shadow: 0 4px 24px rgba(14,165,171,0.18);
+  transform: translateY(-2px) scale(1.04);
+}
+.btn:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.project-card {
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.project-card:hover, .project-card:focus {
+  box-shadow: 0 8px 32px rgba(56,189,248,0.15);
+  transform: translateY(-2px) scale(1.02);
+  border-color: #38bdf8;
+}
 /* ===========================
  Global theme
  =========================== */
@@ -15,11 +57,57 @@
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
   --accent: #38bdf8;
+  --accent-dark: #0ea5ab; /* darker teal for hover states (better contrast with white text) */
   --border-color: rgba(148, 163, 184, 0.2);
   --radius-lg: 1rem;
   --radius-xl: 1.5rem;
   --max-width: 1200px;
   --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Self-hosted webfonts - place WOFF2 files in /fonts and preload them in each HTML head */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/montserrat-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/montserrat-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/montserrat-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('fonts/opensans-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('fonts/opensans-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('fonts/opensans-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 * {
@@ -50,9 +138,35 @@ h1, h2, h3,
   font-weight: 600;
   letter-spacing: 0.02em;
 }
-/* ===========================
-  Layout helpers
-=========================== */
+.nav-right a {
+  font-size: 0.85rem;
+  color: #e2e8f0;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  transition: color 0.15s;
+}
+
+/* Make top navigation links use the accent color on hover/focus */
+.nav-right a:hover,
+.nav-right a:focus {
+  color: var(--accent);
+}
+
+/* Brand hover/focus matches accent as well */
+.nav-left .brand:hover,
+.nav-left .brand:focus {
+  color: var(--accent);
+}
+
+/* Accessible focus ring for keyboard users */
+.nav-right a:focus-visible,
+.nav-left .brand:focus-visible {
+  outline: 3px solid rgba(14,165,171,0.14);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Page wrapper: centers content and provides outer padding */
 .wrapper {
   max-width: var(--max-width);
   padding: 2rem 1.5rem 5rem;
@@ -126,17 +240,7 @@ h1, h2, h3,
   color: var(--text-secondary);
 }
 
-.nav-right a {
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-  text-decoration: none;
-  margin-left: 1.5rem;
-  transition: color 0.15s;
-}
-
-.nav-right a:hover {
-  color: var(--accent);
-}
+/* (duplicate nav-right rules removed) */
 
 /* ===========================
   Hero card
@@ -294,9 +398,9 @@ h1, h2, h3,
 }
 
 .project-desc {
-  color: var(--text-secondary);
-  font-size: 0.8rem;
-  line-height: 1.4;
+  color: #e2e8f0; /* higher contrast for readability */
+  font-size: 0.85rem;
+  line-height: 1.5;
   margin: 0;
   flex-grow: 1;
 }
@@ -353,5 +457,68 @@ h1, h2, h3,
     flex-wrap: nowrap;
   }
 }
+
+/* Accessibility & thumbnail polish */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 9999;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-card-solid);
+  color: var(--text-primary);
+  border-radius: 4px;
+}
+
+.thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+.thumb-caption {
+  font-size: 0.8rem;
+  color: #e2e8f0; /* higher contrast than var(--text-secondary) */
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Image credit links: ensure good contrast and remove default browser visited color */
+.thumb-caption a,
+.thumb-caption a:visited {
+  color: #38bdf8; /* accent, readable on dark bg */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.18s;
+}
+.thumb-caption a:hover,
+.thumb-caption a:focus {
+  color: #fff;
+  text-decoration: underline;
+}
+
+a:focus, button:focus {
+  outline: 3px solid rgba(99, 102, 241, 0.6);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
+
+.btn {
+  transition: transform 140ms var(--ease, cubic-bezier(.2,.8,.2,1)), box-shadow 140ms var(--ease, cubic-bezier(.2,.8,.2,1));
+}
+.btn:active { transform: translateY(1px); }
 
 

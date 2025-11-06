@@ -3,15 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Perception stack and sensor mounting for AMR — Romir Vyas, Senior Mechanical Engineer." />
   <title>Vecna Robotics AMR Integration | Romir Vyas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/montserrat-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserrat-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserrat-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensans-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensans-600.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Inline critical @font-face to reduce FOUT -->
+  <style>
+    @font-face{font-family:'Montserrat';src:url('fonts/montserrat-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+    @font-face{font-family:'Montserrat';src:url('fonts/montserrat-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+    @font-face{font-family:'Montserrat';src:url('fonts/montserrat-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+    @font-face{font-family:'Open Sans';src:url('fonts/opensans-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+    @font-face{font-family:'Open Sans';src:url('fonts/opensans-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+    @font-face{font-family:'Open Sans';src:url('fonts/opensans-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+  </style>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site-header">
-  <nav class="navbar">
+  <nav class="navbar" role="navigation" aria-label="Primary navigation">
     <div class="nav-left">
       <a class="brand" href="index.html">Romir Vyas</a>
       <div class="sub">Senior Mechanical Engineer</div>
@@ -22,12 +39,12 @@
       <a href="personal.html">Personal</a>
     <!--  <a href="viewer.html">Interactive CAD</a> -->
       <a href="about.html">About</a>
-      <a href="RomirVyas_Resume.pdf" target="_blank">Resume</a>
+      <a href="RomirVyas_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
     </div>
   </nav>
 </header>
 
-<main class="wrapper">
+<main id="main" class="wrapper">
 
   <section class="section-head" data-reveal>
     <div class="section-eyebrow">Vecna Robotics</div>
@@ -38,33 +55,10 @@
     </p>
   </section>
 
-<div class="thumb"
-  style="
-    background-image:url('images/vecna_hero.png');
-    margin-top:1rem;
-    background-size:cover;
-    background-position:center;
-    border-radius:0.75rem;
-    width:100%;
-    aspect-ratio:4/4;
-    max-width:600px;
-    margin-left:auto;
-    margin-right:auto;
-  ">
-</div>
-
-<div style="
-  font-size:0.8rem;
-  color:var(--text-secondary);
-  text-align:center;
-  margin-top:0.4rem;
-  opacity:0.8;
-">
-  Image from <a href="https://vecnarobotics.com" target="_blank"
-    style="color:var(--accent); text-decoration:none; font-weight:500;">
-    vecnarobotics.com
-  </a>
-</div>
+  <figure class="thumb" style="max-width:600px; margin:1rem auto 0;">
+    <img src="images/vecna_hero.png" alt="Sensor mast and LiDAR mounted on AMR" width="1200" height="1200" style="display:block; width:100%; height:auto; object-fit:cover; border-radius:0.75rem;" />
+    <figcaption class="thumb-caption">Image: <a href="https://vecnarobotics.com" target="_blank" rel="noopener noreferrer">vecnarobotics.com</a></figcaption>
+  </figure>
 
   <section data-reveal style="margin-bottom:2rem;">
     <div class="section-eyebrow">Objective</div>

@@ -3,15 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ruggedized radar enclosure design for autonomous vehicles — Romir Vyas." />
   <title>Ground-Positioning Radar Design | Romir Vyas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/montserrat-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserrat-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserrat-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensans-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensans-600.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Inline critical @font-face to reduce FOUT -->
+  <style>
+    @font-face{font-family:'Montserrat';src:url('fonts/montserrat-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+    @font-face{font-family:'Montserrat';src:url('fonts/montserrat-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+    @font-face{font-family:'Montserrat';src:url('fonts/montserrat-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+    @font-face{font-family:'Open Sans';src:url('fonts/opensans-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+    @font-face{font-family:'Open Sans';src:url('fonts/opensans-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+    @font-face{font-family:'Open Sans';src:url('fonts/opensans-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+  </style>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site-header">
-  <nav class="navbar">
+  <nav class="navbar" role="navigation" aria-label="Primary navigation">
     <div class="nav-left">
       <a class="brand" href="index.html">Romir Vyas</a>
       <div class="sub">Senior Mechanical Engineer</div>
@@ -22,12 +39,12 @@
       <a href="personal.html">Personal</a>
     <!--  <a href="viewer.html">Interactive CAD</a> -->
       <a href="about.html">About</a>
-      <a href="RomirVyas_Resume.pdf" target="_blank">Resume</a>
+      <a href="RomirVyas_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
     </div>
   </nav>
 </header>
 
-<main class="wrapper">
+<main id="main" class="wrapper">
 
   <section class="section-head" data-reveal>
     <div class="section-eyebrow">GPR (Ground-Positioning Radar)</div>
@@ -39,40 +56,16 @@
     </p>
   </section>
 
-  <div class="thumb"
-  style="
-    background-image:url('images/gpr_hero.jpg');
-    margin-top:2rem;
-    background-size:contain;   /* show full image */
-    background-repeat:no-repeat;
-    background-position:center;
-    border-radius:0.75rem;
-    width:100%;
-    aspect-ratio:16/9;
-    max-width:900px;
-    margin-left:auto;
-    margin-right:auto;
-    background-color:#1e2537;  /* optional backdrop color */
-  ">
-</div>
-  <div style="
-  font-size:0.8rem;
-  color:var(--text-secondary);
-  text-align:center;
-  margin-top:0.4rem;
-  opacity:0.8;
-">
-  Image from <a href="https://www.gpr.com" target="_blank"
-    style="color:var(--accent); text-decoration:none; font-weight:500;">
-    www.gpr.com
-  </a>
-</div>
+  <figure class="thumb" style="max-width:900px; margin:2rem auto 0; background:#1e2537; border-radius:0.75rem;">
+    <img src="images/gpr_hero.jpg" alt="Sealed radar enclosure mounted under a vehicle" width="1600" height="900" style="display:block; width:100%; height:auto; object-fit:contain; border-radius:0.75rem;" />
+    <figcaption class="thumb-caption">Image: <a href="https://www.gpr.com" target="_blank" rel="noopener noreferrer">gpr.com</a></figcaption>
+  </figure>
 
-  <section data-reveal style="margin-bottom:2rem;">
+  <section data-reveal style="margin-bottom:2rem; margin-top:2rem;">
     <div class="section-eyebrow">Environment & Requirements</div>
     <p class="section-desc">
       • Exposure to water, salt spray, debris, thermal cycling, shock/vibration<br>
-      • Underbody mounting envelope with strict packaging limits<br>
+      • Underbody mounting with strict packaging limits<br>
       • Maintain RF performance / keep sensitive internals protected<br>
       • Route cables/connectors with proper strain relief and ingress protection<br>
     </p>
@@ -81,9 +74,8 @@
   <section data-reveal style="margin-bottom:2rem;">
     <div class="section-eyebrow">My Role</div>
     <p class="section-desc">
-      • Owned mechanical architecture of the enclosure and sealing interfaces<br>
-      • Developed sealing and fastener strategy for repeatable assembly<br>    
-      • Balanced machinability, coating/finish, and corrosion resistance<br>  
+      • Owned mechanical architecture of the GPR enclosure, sealing strategy, mounting, and repairability<br>    
+      • Responsible for electronics packaging design, grounding, and thermal management<br>  
     </p>
   </section>
 

@@ -4,14 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Personal Projects | Romir Vyas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/montserrat-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserrat-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserrat-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensans-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensans-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
+  <meta name="description" content="Personal mechanical projects: bike hardware, fixtures, and CAD — Romir Vyas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site-header">
-  <nav class="navbar">
+  <nav class="navbar" role="navigation" aria-label="Primary navigation">
     <div class="nav-left">
       <a class="brand" href="index.html">Romir Vyas</a>
       <div class="sub">Senior Mechanical Engineer</div>
@@ -22,12 +32,12 @@
       <a href="personal.html">Personal</a>
      <!-- <a href="viewer.html">Interactive CAD</a> -->
       <a href="about.html">About</a>
-      <a href="RomirVyas_Resume.pdf" target="_blank">Resume</a>
+      <a href="RomirVyas_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
     </div>
   </nav>
 </header>
 
-<main class="wrapper">
+<main id="main" class="wrapper">
 
   <section class="section-head" data-reveal>
     <div class="section-eyebrow">Personal / Independent Work</div>
@@ -40,20 +50,10 @@
 
   <section data-reveal style="margin-bottom:3rem;">
     <div class="section-eyebrow">Bike Hardware / Seatpost</div>
-    <div class="thumb"
-  style="
-    background-image:url('images/bike_hero.png');
-    margin-top:1rem;
-    background-size:cover;
-    background-position:center;
-    border-radius:0.75rem;
-    width:100%;
-    aspect-ratio:16/9;
-    max-width:500px;          /* caps size on desktop */
-    margin-left:auto;
-    margin-right:auto;
-  ">
-</div>
+    <figure class="thumb" style="max-width:500px; margin-top:1rem; margin-left:auto; margin-right:auto;">
+      <img src="images/bike_hero.png" alt="Custom bike seatpost clamp" width="1600" height="900" />
+      <figcaption class="thumb-caption">Custom seatpost clamp</figcaption>
+    </figure>
 
     <p class="section-desc" style="margin-top:1rem;">
       • Custom bike seatpost clamp<br>
@@ -84,20 +84,10 @@
   
   <section data-reveal style="margin-bottom:3rem;">
     <div class="section-eyebrow">Espresso Machine</div>
-    <div class="thumb"
-  style="
-    background-image:url('images/espresso_mix.png');
-    margin-top:1rem;
-    background-size:cover;
-    background-position:center;
-    border-radius:0.75rem;
-    width:100%;
-    aspect-ratio:5/4;  /* was probably 16/9 before */
-    max-width:900px;
-    margin-left:auto;
-    margin-right:auto;
-  ">
-</div>
+    <figure class="thumb" style="max-width:900px; margin-top:1rem; margin-left:auto; margin-right:auto;">
+      <img src="images/espresso_mix.png" alt="Rendered SolidWorks image of espresso machine" width="1125" height="900" />
+      <figcaption class="thumb-caption">Rendered images of Espresso Machine</figcaption>
+    </figure>
 
     <p class="section-desc" style="margin-top:1rem;">
       • Rendered with Solidworks Visualize<br>

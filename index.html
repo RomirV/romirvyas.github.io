@@ -3,15 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Romir Vyas — Senior Mechanical Engineer. Production-ready electromechanical systems, robotics, and sensor hardware." />
   <title>Romir Vyas | Senior Mechanical Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/montserrat-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserrat-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserrat-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensans-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensans-600.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Inline critical @font-face to reduce flash-of-unstyled-text (FOUT) -->
+  <style>
+    @font-face{font-family:'Montserrat';src:url('fonts/montserrat-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+    @font-face{font-family:'Montserrat';src:url('fonts/montserrat-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+    @font-face{font-family:'Montserrat';src:url('fonts/montserrat-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+    @font-face{font-family:'Open Sans';src:url('fonts/opensans-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+    @font-face{font-family:'Open Sans';src:url('fonts/opensans-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+    @font-face{font-family:'Open Sans';src:url('fonts/opensans-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+  </style>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site-header">
-  <nav class="navbar">
+  <nav class="navbar" role="navigation" aria-label="Primary navigation">
     <div class="nav-left">
       <a class="brand" href="index.html">Romir Vyas</a>
       <div class="sub">Senior Mechanical Engineer</div>
@@ -22,21 +39,23 @@
       <a href="personal.html">Personal</a>
    <!--   <a href="viewer.html">Interactive CAD</a> -->
       <a href="about.html">About</a>
-      <a href="RomirVyas_Resume.pdf" target="_blank">Resume</a>
+      <a href="RomirVyas_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
     </div>
   </nav>
 </header>
 
-<main class="wrapper">
+<main id="main" class="wrapper">
 
   <!-- HERO / INTRO -->
   <section class="hero-grid" data-reveal>
     <div class="hero-card">
-      <h1 class="hero-title">I design, build, and release production-ready electromechanical systems.</h1>
-      <p class="hero-text">
-        7+ years in robotics and autonomous sensing. I work from concept through validation
-        to production: mechanical design, sealing and environmental robustness, tolerance
-        control, fixtures, and manufacturing handoff.
+      <h1 class="hero-title">
+  <div class="typing" style="--delay: 0ms;">Hi! I'm Romir.</div>
+  <div class="typing" style="--delay: 1500ms;">I design and build hardware systems from the ground up.</div>
+</h1>
+
+      <p class="typing"> 
+        7+ years in robotics and autonomous vehicle systems. 
       </p>
 
       <div class="hero-buttons">
@@ -70,13 +89,13 @@
       </p>
     </div>
 
-    <div class="project-grid">
+  <div class="project-grid">
 
       <!-- Vecna -->
       <a class="project-card" href="project-vecna.html">
-        <div class="thumb"
-          style="background-image:url('images/vecna_thumb.png');">
-        </div>
+        <figure class="thumb" style="max-width:480px; margin:0 0 1rem 0;">
+          <img src="images/vecna_thumb.png" alt="Mounted LiDAR and camera on AMR (Vecna project)" width="480" height="270" />
+        </figure>
         <div class="project-meta">Robotics · Sensor Integration</div>
         <div class="project-name">Perception stack + sensor mounting for autonomous mobile robot</div>
         <p class="project-desc">
@@ -87,13 +106,13 @@
 
       <!-- GPR -->
       <a class="project-card" href="project-gpr.html">
-        <div class="thumb"
-          style="background-image:url('images/gpr_thumb.jpg');">
-        </div>
+        <figure class="thumb" style="max-width:480px; margin:0 0 1rem 0;">
+          <img src="images/gpr_thumb.jpg" alt="Ruggedized radar housing (GPR project)" width="480" height="270" />
+        </figure>
         <div class="project-meta">Sealing · Thermal · DFMA</div>
         <div class="project-name">Ruggedized Ground-Positioning Radar</div>
         <p class="project-desc">
-          Led the design of an IP-style sealed radar housing for autonomous vehicles:
+          Led the design of an IPx sealed radar housing for autonomous vehicles:
           mechanical architecture, sealing strategy, thermal path, connector routing,
           and vendor handoff.
         </p>
@@ -101,14 +120,14 @@
 
       <!-- Personal -->
       <a class="project-card" href="personal.html">
-        <div class="thumb"
-          style="background-image:url('images/personal_thumb.png');">
-        </div>
+        <figure class="thumb" style="max-width:480px; margin:0 0 1rem 0;">
+          <img src="images/personal_thumb.png" alt="Personal mechanical projects — fixtures and parts" width="480" height="270" />
+        </figure>
         <div class="project-meta">Personal Builds · CAD · Fixtures</div>
         <div class="project-name">Hands-on mechanical projects</div>
         <p class="project-desc">
-          Custom espresso machine work, bike hardware, and fixtures.
-          Full CAD, drawings, and manufacturability considerations I can publicly show.
+          Espresso machine, bike hardware.
+          Example CAD drawings and rendered models.
         </p>
       </a>
 
