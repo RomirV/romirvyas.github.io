@@ -12,6 +12,7 @@
   <link rel="preload" href="fonts/opensans-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <meta name="description" content="Personal mechanical projects: bike hardware, fixtures, and CAD — Romir Vyas." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,15 +51,17 @@
 
   <section data-reveal style="margin-bottom:3rem;">
     <div class="section-eyebrow">Bike Hardware / Seatpost</div>
-    <figure class="thumb" style="max-width:500px; margin-top:1rem; margin-left:auto; margin-right:auto;">
-      <img src="images/bike_hero.png" alt="Custom bike seatpost clamp" width="1600" height="900" />
+    <figure class="thumb" style="max-width:900px; margin-top:1rem; margin-left:auto; margin-right:auto;">
+        <model-viewer src="models/Seatpost Assembly.draco.draco.glb"
+                camera-controls
+                auto-rotate
+                shadow-intensity="1"
+                style="width:100%; max-width:900px; height:500px; border:1px solid rgba(255,255,255,0.1); border-radius:0.75rem; background:#1e2537; margin:0 auto;">
+  </model-viewer>
       <figcaption class="thumb-caption">Custom seatpost clamp</figcaption>
     </figure>
 
-    <p class="section-desc" style="margin-top:1rem;">
-      • Custom bike seatpost clamp<br>
-      • Generated drawings and GD&T for key interfaces<br> 
-    </p>
+    
   </section>
 
  <section data-reveal style="margin-bottom:3rem;">
@@ -80,6 +83,15 @@
     </a>
   </div>
 </section>
+<section data-reveal style="margin-bottom:3rem;">
+  <h2 class="section-title" style="margin-bottom:1rem;">3D View</h2>
+  <model-viewer src="models/Seatpost Assembly.draco.draco.glb"
+                camera-controls
+                auto-rotate
+                shadow-intensity="1"
+                style="width:100%; max-width:900px; height:500px; border:1px solid rgba(255,255,255,0.1); border-radius:0.75rem; background:#1e2537; margin:0 auto;">
+  </model-viewer>
+</section>
 
   
   <section data-reveal style="margin-bottom:3rem;">
@@ -95,7 +107,6 @@
       
     </p>
   </section>
-
   <section data-reveal style="margin-bottom:2rem;">
     <!-- <a class="btn btn-accent" href="viewer.html">See Interactive CAD →</a> -->
     <a class="btn" href="index.html">← Back to Home</a>
